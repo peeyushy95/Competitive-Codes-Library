@@ -20,7 +20,6 @@ long long getArea(){
     for(int i=0;i<m;i++)
             ans+= vertices[i].first * vertices[i+1].second - vertices[i+1].first * vertices[i].second;
 	
-
     return abs(ans);
 }
 

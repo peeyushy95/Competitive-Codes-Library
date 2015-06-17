@@ -1,5 +1,5 @@
 
-
+//Non-self intersecting and vertices should be in clockwise or anticlockwise order """"ONLY""""""
 // Area of polygon = ans/2
 // Convert into double if exact area is required
 
@@ -22,6 +22,5 @@ long long getArea(){
 	
 
     return abs(ans);
-    
 }
 

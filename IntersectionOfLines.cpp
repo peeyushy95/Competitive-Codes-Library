@@ -1,7 +1,6 @@
 /*
    AUTHOR  : Peeyush Yadav
    Problem : 
-   
 */
 
 #include<bits/stdc++.h>

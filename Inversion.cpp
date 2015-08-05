@@ -98,5 +98,5 @@ int main(){
 	
 	#ifdef Megamind
 		cout << "\nTime elapsed : " << 1.0 * clock() / CLOCKS_PER_SEC * 1000 << " ms." << endl;
-    #endif
+        #endif
 }

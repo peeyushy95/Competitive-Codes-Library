@@ -21,12 +21,13 @@ long long power(long long a,long long b,long long mod){
         return (temp*a)%mod;
     }
 }
+
 /*........................................................END OF TEMPLATES.......................................................................*/
  
 long long a[3164],b[3164],modu=1e9+7;
  
  
-void solve(int n,int m,int l,int r){                                        // computing combination 4 each in range[l,r]
+void solve(int n,int m,int l,int r){               // computing combination 4 each in range[l,r]
         int sq=1,i,j,l1;
         long long ans=0;
  
@@ -59,6 +60,7 @@ void solve(int n,int m,int l,int r){                                        // c
             }
             ans=(ans+b[i])%modu;            // ans =  gcd combination in [l,e]
         }
+        
         l1=(e+1>l)?(e+1):l;                 // ans+= gcd combin. [max(e+1,l),r]
         for(i=l1;i<r+1;i++)
             ans=(ans+a[m/i])%modu;
@@ -72,12 +74,11 @@ int main(){
 
     int t,n,m,l,r;
     scanf("%d",&t);
+    
     while(t--){
         scanf("%d%d%d%d",&n,&m,&l,&r);
         solve(n,m,l,r);
     }
- 
- 
 return 0;
 }
  

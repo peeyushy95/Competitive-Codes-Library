@@ -1,6 +1,7 @@
 /* AUTHOR: Peeyush yadav
    Problem: Bits
 */
+
 #include<bits/stdc++.h>
 #define f(a,b,c) for(int a=b;a<c;a++)
 #define s(x) scanf("%d",&x);

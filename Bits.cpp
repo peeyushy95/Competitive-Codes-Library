@@ -1,4 +1,5 @@
-/* AUTHOR: Peeyush yadav
+/* 
+   AUTHOR: Peeyush yadav
    Problem: Bits
 */
 

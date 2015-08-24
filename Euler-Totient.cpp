@@ -17,9 +17,10 @@ method :1
 ...............................................................................
 method :2
 
-
+    void phi1() {
 	phi[0]  = 0;
 	for (int i=1; i<maxn; ++i) phi[i] = i - 1;
 	for (int i=1; i<maxn; ++i)
 		for (int j=i+i; j<maxn; j+=i)
 		         phi[j] -= phi[i];
+    }

@@ -1,3 +1,6 @@
+#define n 112345
+int phi[n+1];
+
 
 method :1
 

@@ -19,15 +19,15 @@ void fast(){
 		#define trace3(x,y,z)
 	#endif
 	
-	#define fi 						first
-	#define se 						second
-	#define mp 						make_pair
-	#define pb(x) 					push_back(x)
+	#define fi 			first
+	#define se 			second
+	#define mp 			make_pair
+	#define pb(x) 			push_back(x)
 	#define s(x)                    scanf("%d",&x);
 	#define sl(x)                   scanf("%lld",&x);
 	#define p(x)                    printf("%d\n",x);
 	#define f(a,b,c)                for(int a=b;a<c;a++)
-	#define r(a,b,c)				for(int a=b;a>c;a--)
+	#define r(a,b,c)		for(int a=b;a>c;a--)
 	#define p2(x,y)                 printf("%d %d\n",x,y);
 	#define pl(x)                   printf("%lld\n",x);
 	#define pl2(x,y)                printf("%lld %lld\n",x,y);
@@ -48,13 +48,13 @@ struct node{
  
 inline void  insert (node * x, int bits, int pos){
    
-	if (pos==-1) return;
+    if (pos==-1) return;
     if ((1<<pos)&bits){
         if (x->one==NULL){
 			x->one=(struct node *) malloc(sizeof(struct node));
 			x->one->one = NULL;
 			x->one->zero = NULL;
-		}
+	}
         insert(x->one, bits, pos-1);
     }
     else{
@@ -62,7 +62,7 @@ inline void  insert (node * x, int bits, int pos){
 			x->zero=(struct node *) malloc(sizeof(struct node));
 			x->zero->one = NULL;
 			x->zero->zero = NULL;
-		}
+	}
         insert(x->zero, bits, pos-1);
     }
 	
@@ -72,12 +72,12 @@ inline int query (node * t, int a, int pos){
   
   if (pos==-1) return 0;
   if ((1<<pos)&a){
-      if (t->zero==NULL)	 return query (t->one, a, pos-1);
-      else					 return po[pos] + query(t->zero, a, pos-1);
+      if (t->zero==NULL)	return query (t->one, a, pos-1);
+      else			return po[pos] + query(t->zero, a, pos-1);
   }
   else {
-      if (t->one==NULL)		 return query(t->zero, a, pos-1);  
-      else					 return po[pos] + query(t->one, a, pos-1);
+      if (t->one==NULL)		return query(t->zero, a, pos-1);  
+      else			return po[pos] + query(t->one, a, pos-1);
   } 
  
 }
@@ -120,10 +120,7 @@ int main(){
 		b[i] = max(b[i+1], query(trie,xr,29));
 	}
 	int ans = 0;
-	
-	//p1d(f,n)
-	//p1d(b,n)
-	
+
 	f(i,1,n)	if(f[i-1] + b[i] > ans) ans = f[i-1] + b[i];
 	
 	

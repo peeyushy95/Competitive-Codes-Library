@@ -2,7 +2,7 @@
    (•_•)
    <) )>
     / \
-   AUTHOR: Peeyush yadav
+   AUTHOR: Peeyush yadav {~_~}
    Problem: http://www.codechef.com/APRIL15/problems/FRMQ
 */
 #include<bits/stdc++.h>

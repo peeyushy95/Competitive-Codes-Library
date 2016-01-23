@@ -1,4 +1,7 @@
 /*
+   (•_•)
+   <) )>
+    / \
    AUTHOR: Peeyush yadav
    Problem: http://www.codechef.com/APRIL15/problems/FRMQ
 */

@@ -61,7 +61,7 @@ bool ZAlgo(string pattern , string text){
 		else{
 			int offset = k - l , diff = r - k + 1;
 
-			if(z[offset] > diff){
+			if(z[offset] >= diff){
 
 				int i = r + 1;
 				while(i < n && s[i] == s[i - k]) i++;

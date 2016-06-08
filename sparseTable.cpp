@@ -98,10 +98,10 @@ int main(){
 	logo[2]=1;
 	f(i,3,n+1) logo[i] = logo[i>>1]+1;
 	
-    for(j=1;p[j]<=n;j++)
+    	for(j=1;p[j]<=n;j++)
 	  for(i=0;i+p[j]-1<n;i++){
 		  if (a[pre[j-1][i]] > a[pre[j-1][i+p[j-1]]])     pre[j][i] = pre[j-1][i];
-		  else											  pre[j][i] = pre[j-1][i+p[j-1]];
+		  else						  pre[j][i] = pre[j-1][i+p[j-1]];
 	  }
 	
 	i = min(x,y);
@@ -114,15 +114,16 @@ int main(){
 	f(i1,1,m) {
       
        if(Xpath[l]>Ypath[r]) {
-		   i = Ypath[r++];
-		   j = Xpath[l++];
+	    i = Ypath[r++];
+	    j = Xpath[l++];
        }
        else{
        	   j = Ypath[r++];
-		   i = Xpath[l++];
+	   i = Xpath[l++];
        }
-	   k =logo[j-i+1];
-	   if(a[pre[k][i]] >= a[pre[k][j-p[k]+1]])     ans = ans+a[pre[k][i]];
+       
+       k =logo[j-i+1];
+       if(a[pre[k][i]] >= a[pre[k][j-p[k]+1]])     ans = ans+a[pre[k][i]];
        else                                        ans = ans + a[pre[k][j-p[k]+1]];
 	   if(l>n-1) l = 1;
 	   if(r>n)   r = 1;
